@@ -12,8 +12,14 @@ class ExpenseItem extends StatelessWidget {
     return Card(
       child: Padding(
         padding: const EdgeInsets.all(Dimens.padding),
-        child: Column(children: [
-          Text(expense.title),
+        child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+          Text(
+            expense.title,
+            style: Theme.of(context)
+                .textTheme
+                .titleMedium!
+                .copyWith(fontWeight: FontWeight.bold),
+          ),
           const SizedBox(height: Dimens.space),
           Row(
             children: [
