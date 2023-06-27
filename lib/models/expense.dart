@@ -5,12 +5,12 @@ import 'package:uuid/uuid.dart';
 const uui = Uuid();
 final formatter = DateFormat.yMd();
 
-enum Category { food, travel, laisure, work }
+enum Category { food, travel, leisure, work }
 
 const categoryIcons = {
   Category.food: Icons.launch_outlined,
   Category.travel: Icons.flight_takeoff_outlined,
-  Category.laisure: Icons.movie_outlined,
+  Category.leisure: Icons.movie_outlined,
   Category.work: Icons.work_outlined
 };
 
