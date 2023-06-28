@@ -1,16 +1,12 @@
-# expense_tracker
+# Expense Tracker
 
-A new Flutter project.
+## Using Flutter
 
-## Getting Started
+Simple app to track expenses, just to practice Flutter.
 
-This project is a starting point for a Flutter application.
+## Features
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+- List locally saved expenses.
+- Add new expenses.
+- Remove expenses by swiping horizontally.
+- Display a chart as a summary of the expenses.
