@@ -8,7 +8,7 @@ final formatter = DateFormat.yMd();
 enum Category { food, travel, leisure, work }
 
 const categoryIcons = {
-  Category.food: Icons.launch_outlined,
+  Category.food: Icons.lunch_dining,
   Category.travel: Icons.flight_takeoff_outlined,
   Category.leisure: Icons.movie_outlined,
   Category.work: Icons.work_outlined
