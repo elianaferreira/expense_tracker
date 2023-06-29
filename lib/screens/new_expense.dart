@@ -1,5 +1,6 @@
 import 'package:expense_tracker/constants/dimens.dart';
 import 'package:expense_tracker/models/expense.dart';
+import 'package:expense_tracker/utils/utils.dart';
 import 'package:flutter/material.dart';
 
 class NewExpense extends StatefulWidget {
@@ -46,21 +47,11 @@ class _NewExpenseState extends State<NewExpense> {
     if (_titleController.text.trim().isEmpty ||
         amountIsInvalid ||
         _selectedDate == null) {
-      showDialog(
-        context: context,
-        builder: (ctx) => AlertDialog(
-          title: const Text("Invalid input"),
-          content: const Text(
-              'Please make sure a valid title, amount, date and category was entered.'),
-          actions: [
-            TextButton(
-                onPressed: () {
-                  Navigator.pop(ctx);
-                },
-                child: const Text("Ok"))
-          ],
-        ),
-      );
+      showSimpleDialog(
+          context: context,
+          title: 'Invalid input',
+          content:
+              'Please make sure a valid title, amount, date and category was entered.');
       return;
     }
 
