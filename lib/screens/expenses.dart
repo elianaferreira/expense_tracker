@@ -69,6 +69,7 @@ class _ExpensesState extends State<Expenses> {
 
   @override
   Widget build(BuildContext context) {
+    final width = MediaQuery.of(context).size.width;
     Widget mainWidget = const Center(
       child: Text('No expenses found. Start adding some...'),
     );
@@ -85,18 +86,31 @@ class _ExpensesState extends State<Expenses> {
               onPressed: _openAddExpenseOverlay, icon: const Icon(Icons.add))
         ],
       ),
-      body: Column(
-        children: [
-          Chart(expenses: _registeredExpenses),
-          Container(
-              color: Theme.of(context).colorScheme.primaryContainer,
-              height: Dimens.divider),
-          const SizedBox(height: Dimens.paddingS),
-          Expanded(
-            child: mainWidget,
-          ),
-        ],
-      ),
+      body: width < 600
+          ? Column(
+              children: [
+                Chart(expenses: _registeredExpenses),
+                Container(
+                    color: Theme.of(context).colorScheme.primaryContainer,
+                    height: Dimens.divider),
+                const SizedBox(height: Dimens.paddingS),
+                Expanded(
+                  child: mainWidget,
+                ),
+              ],
+            )
+          : Row(
+              children: [
+                Expanded(child: Chart(expenses: _registeredExpenses)),
+                Container(
+                    color: Theme.of(context).colorScheme.primaryContainer,
+                    height: Dimens.divider),
+                const SizedBox(height: Dimens.paddingS),
+                Expanded(
+                  child: mainWidget,
+                ),
+              ],
+            ),
     );
   }
 }
