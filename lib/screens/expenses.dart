@@ -87,7 +87,7 @@ class _ExpensesState extends State<Expenses> {
               onPressed: _openAddExpenseOverlay, icon: const Icon(Icons.add))
         ],
       ),
-      body: width < 600
+      body: width < Dimens.maxPortraitWidth
           ? Column(
               children: [
                 Chart(expenses: _registeredExpenses),

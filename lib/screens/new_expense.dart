@@ -130,7 +130,7 @@ class _NewExpenseState extends State<NewExpense> {
               ),
               child: Column(
                 children: [
-                  if (width > 600)
+                  if (width > Dimens.maxPortraitWidth)
                     Row(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
@@ -141,7 +141,7 @@ class _NewExpenseState extends State<NewExpense> {
                     )
                   else
                     titleInputWidget,
-                  if (width > 600)
+                  if (width > Dimens.maxPortraitWidth)
                     Row(
                       children: [
                         Expanded(child: categoryInputWidget),
@@ -163,7 +163,7 @@ class _NewExpenseState extends State<NewExpense> {
                   const SizedBox(height: Dimens.padding),
                   Row(
                     children: [
-                      if (width <= 600) categoryInputWidget,
+                      if (width <= Dimens.maxPortraitWidth) categoryInputWidget,
                       const Spacer(),
                       TextButton(
                           onPressed: () {
